@@ -9,6 +9,12 @@ form.addEventListener('submit', e => {
 
     let score = 0;
     const user_ans = [form.q1.value,form.q2.value,form.q3.value,form.q4.value];
+    
+    // All Ans Should Be Selected
+    if (user_ans.includes("")) {
+        alert("Give All Ans")
+        return 0;
+    }
 
     // Checking Ans
     user_ans.forEach((ans,index)=> {
